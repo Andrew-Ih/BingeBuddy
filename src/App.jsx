@@ -3,6 +3,7 @@ import Search from './components/search.jsx'
 import Spinner from './components/Spinner.jsx';
 import MovieCard from './components/MovieCard.jsx';
 import { useDebounce } from 'react-use';
+import { Client } from 'appwrite';
 
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
