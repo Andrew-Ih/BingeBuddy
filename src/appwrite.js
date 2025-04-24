@@ -19,11 +19,15 @@ export const updateSearchCount = async (searchTerm, movie) => {
 
         // 2. If it does, update the count
         if(result.documents.length > 0) {
+            // console.log("IT DOES");
             const doc = result.documents[0];
 
-            await database.updateDocument(DATABASE_ID, COLLECTION_ID, Document.$ID, {
+            await database.updateDocument(DATABASE_ID, COLLECTION_ID, doc.$id, {
                 count: doc.count + 1,
             })
+
+            // console.log("Trying to update count to:", doc.count + 1);
+            // There is a current issue of the search count not updating on appwrite, will need to resolve this later
         // 3. If it doesn't, create a new document with the search term and count as 1
         } else {
             await database.createDocument(DATABASE_ID, COLLECTION_ID, ID.unique(), {
@@ -34,6 +38,19 @@ export const updateSearchCount = async (searchTerm, movie) => {
             })
         }
     } catch (error){
+        console.error(error);
+    }
+};
+
+export const getTrendingMovies = async () => {
+    try {
+        const result = await database.listDocuments(DATABASE_ID, COLLECTION_ID, [
+        Query.limit(5),
+        Query.orderDesc("count")
+        ])
+    
+        return result.documents;
+    } catch (error) {
         console.error(error);
     }
 };
