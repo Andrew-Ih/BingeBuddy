@@ -3,21 +3,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #141414;
-  --color-light-100: #e5e5e5;
-  --color-light-200: #aaaaaa;
-  --color-gray-100: #737373;
-  --color-dark-100: #000000;
+  --color-primary: #0b0b0b;
+  --color-light-100: #ffffff;
+  --color-light-200: #d1d1d1;
+  --color-gray-100: #7a7a7a;
+  --color-dark-100: #141414;
+  --color-accent: #e50914;
   --font-dm-sans: DM Sans, sans-serif;
   --breakpoint-xs: 480px;
-  --background-image-hero-pattern: url("/netflix-hero.jpg");
+  --background-image-hero-pattern: url("/netflix-hero-dark.jpg");
 }
 
 @layer base {
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
-    background: #141414;
+    background: #0b0b0b;
   }
 
   h1 {
@@ -71,7 +72,7 @@
   }
 
   .search {
-    @apply w-full bg-[#333]/60 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
+    @apply w-full bg-[#1a1a1a] px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
 
     & div {
       @apply relative flex items-center;
@@ -82,7 +83,7 @@
     }
 
     & input {
-      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-[#e5e5e5] placeholder-[#aaaaaa] outline-hidden;
+      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-[#ffffff] placeholder-[#d1d1d1] outline-hidden;
     }
   }
 
@@ -95,14 +96,14 @@
   }
 
   .movie-card {
-    @apply bg-[#181818] p-5 rounded-2xl shadow-inner shadow-[#000]/20;
+    @apply bg-[#1c1c1c] p-5 rounded-2xl shadow-inner shadow-[#000]/20;
 
     & img {
       @apply rounded-lg h-auto w-full;
     }
 
     & h3 {
-      @apply text-[#e5e5e5] font-bold text-base line-clamp-1;
+      @apply text-[#ffffff] font-bold text-base line-clamp-1;
     }
 
     & .content {
@@ -118,19 +119,19 @@
     }
 
     & .rating p {
-      @apply font-bold text-base text-[#e5e5e5];
+      @apply font-bold text-base text-[#e50914];
     }
 
     & .content span {
-      @apply text-sm text-[#aaaaaa];
+      @apply text-sm text-[#d1d1d1];
     }
 
     & .content .lang {
-      @apply capitalize text-[#aaaaaa] font-medium text-base;
+      @apply capitalize text-[#d1d1d1] font-medium text-base;
     }
 
     & .content .year {
-      @apply text-[#aaaaaa] font-medium text-base;
+      @apply text-[#d1d1d1] font-medium text-base;
     }
   }
 }
