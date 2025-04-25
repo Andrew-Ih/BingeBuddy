@@ -1,30 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #030014;
-
-  --color-light-100: #cecefb;
-  --color-light-200: #a8b5db;
-
-  --color-gray-100: #9ca4ab;
-
-  --color-dark-100: #0f0d23;
-
+  --color-primary: #141414;
+  --color-light-100: #e5e5e5;
+  --color-light-200: #aaaaaa;
+  --color-gray-100: #737373;
+  --color-dark-100: #000000;
   --font-dm-sans: DM Sans, sans-serif;
-
   --breakpoint-xs: 480px;
-
-  --background-image-hero-pattern: url("/hero-bg.png");
+  --background-image-hero-pattern: url("/netflix-hero.jpg");
 }
 
 @layer base {
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
-    background: #030014;
+    background: #141414;
   }
 
   h1 {
@@ -78,7 +71,7 @@
   }
 
   .search {
-    @apply w-full bg-light-100/5 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
+    @apply w-full bg-[#333]/60 px-4 py-3 rounded-lg mt-10 max-w-3xl mx-auto;
 
     & div {
       @apply relative flex items-center;
@@ -89,7 +82,7 @@
     }
 
     & input {
-      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-gray-200 placeholder-light-200 outline-hidden;
+      @apply w-full bg-transparent py-2 sm:pr-10 pl-10 text-base text-[#e5e5e5] placeholder-[#aaaaaa] outline-hidden;
     }
   }
 
@@ -102,14 +95,14 @@
   }
 
   .movie-card {
-    @apply bg-dark-100 p-5 rounded-2xl shadow-inner shadow-light-100/10;
+    @apply bg-[#181818] p-5 rounded-2xl shadow-inner shadow-[#000]/20;
 
     & img {
       @apply rounded-lg h-auto w-full;
     }
 
     & h3 {
-      @apply text-white font-bold text-base line-clamp-1;
+      @apply text-[#e5e5e5] font-bold text-base line-clamp-1;
     }
 
     & .content {
@@ -125,19 +118,19 @@
     }
 
     & .rating p {
-      @apply font-bold text-base text-white;
+      @apply font-bold text-base text-[#e5e5e5];
     }
 
     & .content span {
-      @apply text-sm text-gray-100;
+      @apply text-sm text-[#aaaaaa];
     }
 
     & .content .lang {
-      @apply capitalize text-gray-100 font-medium text-base;
+      @apply capitalize text-[#aaaaaa] font-medium text-base;
     }
 
     & .content .year {
-      @apply text-gray-100 font-medium text-base;
+      @apply text-[#aaaaaa] font-medium text-base;
     }
   }
 }
