@@ -2,6 +2,18 @@
 
 BingeBuddy is a sleek and dynamic movie discovery application built with React and Vite. Users can search for thousands of movies, see trending titles based on popularity, and enjoy a clean, responsive UI. BingeBuddy also intelligently tracks and analyzes the most frequently searched movies using Appwrite.
 
+## 📸 App Screenshots
+![HTTYD Search](./public/header.png)
+
+| Searching for a Movie | 
+| :----------------------: |
+![HTTYD Search](./public/HTTYD.png)
+![HTTYD Movies](./public/HTTYGM.png) 
+
+| Trending Movies Section | 
+| :----------------------: | 
+| ![Trending Movies](./public/search_movies.png) | 
+
 ## 🚀 Technologies Used
 
 - **React**: Component-based UI development
@@ -34,18 +46,6 @@ useDebounce(() => {
 ```
 
 Without debouncing, typing "Harry Potter" would trigger 12 API calls — with debouncing, only one call is made.
-
-## 📸 App Screenshots
-![HTTYD Search](./public/header.png)
-
-| Searching for a Movie | 
-| :----------------------: |
-![HTTYD Search](./public/HTTYD.png)
-![HTTYD Movies](./public/HTTYGM.png) 
-
-| Trending Movies Section | 
-| :----------------------: | 
-| ![Trending Movies](./public/search_movies.png) | 
 
 ## 🛠️ Installation
 
